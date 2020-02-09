@@ -33,11 +33,17 @@ gem 'redis-rails'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# Use slim 
 gem 'slim-rails', '3.1.3'
 
+# Use sorcery 
 gem 'sorcery'
 
+# Use rails-i18n
 gem 'rails-i18n'
+
+# Use annotate
+gem 'annotate'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
