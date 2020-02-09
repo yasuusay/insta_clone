@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>CuriosityApp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    title CuriosityApp
+    = csrf_meta_tags
+    = csp_meta_tag
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-  </head>
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
 
-  <body>
-    <%= yield %>
-  </body>
-</html>
+  body
+    = yield
+
