@@ -10,5 +10,10 @@ html
     = javascript_include_tag 'application'
 
   body
+    - if logged_in?
+      = render 'shared/header'
+    - else
+      = render 'shared/before_login_header'
+    = render 'shared/flash_messages'
     = yield
 
