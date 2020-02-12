@@ -1,16 +1,16 @@
 require_relative 'boot'
 
-require "rails"
+require 'rails'
 # Pick the frameworks you want:
-require "active_model/railtie"
-require "active_job/railtie"
-require "active_record/railtie"
-require "active_storage/engine"
-require "action_controller/railtie"
-require "action_mailer/railtie"
-require "action_view/railtie"
-require "action_cable/engine"
-require "sprockets/railtie"
+require 'active_model/railtie'
+require 'active_job/railtie'
+require 'active_record/railtie'
+require 'active_storage/engine'
+require 'action_controller/railtie'
+require 'action_mailer/railtie'
+require 'action_view/railtie'
+require 'action_cable/engine'
+require 'sprockets/railtie'
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -29,19 +29,19 @@ module CuriosityApp
 
     # Don't generate system test files.
     config.generators.system_tests = nil
-    
+
     # 言語ファイルを階層ごとに設定するための記述
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
     # アプリケーションが対応している言語のホワイトリスト(ja = 日本語, en = 英語)
-    config.i18n.available_locales = %i(ja en)
+    config.i18n.available_locales = %i[ja en]
     # 上記の対応言語以外の言語が指定された場合、エラーとするかの設定
     config.i18n.enforce_available_locales = true
     # デフォルトの言語設定
     config.i18n.default_locale = :ja
-    
+
     config.time_zone = 'Tokyo'
     config.active_record.default_timezone = :local
-    
+
     config.generators do |g|
       g.skip_routes true
       g.assets false
