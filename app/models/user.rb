@@ -17,6 +17,7 @@
 
 class User < ApplicationRecord
   authenticates_with_sorcery!
+  has_many :posts, dependent: :destroy
 
   before_save { self.email = email.downcase }
   validates :password, length: { minimum: 4 }, if: -> { new_record? || changes[:crypted_password] }
