@@ -1,0 +1,29 @@
+  
+.container
+  .row
+    .col-md-8.col-12.pt-5
+      = render @posts
+    .col-md-4.col-12
+      - if logged_in?
+        .profile-box.mb-3.pt-5
+          = image_tag 'profile.png', size: '50x50', class: 'rounded-circle mr-1'
+          = current_user.username
+      .users-box.mb-3
+        .card
+          .card-header
+            | ユーザー
+          .card-body
+            .user.mb-3
+              = image_tag 'profile.png', size: '40x40', class: 'rounded-circle mr-1'
+              | A
+            .user.mb-3
+              = image_tag 'profile.png', size: '40x40', class: 'rounded-circle mr-1'
+              | B
+            .user.mb-3
+              = image_tag 'profile.png', size: '40x40', class: 'rounded-circle mr-1'
+              | C
+            .user.mb-3
+              = image_tag 'profile.png', size: '40x40', class: 'rounded-circle mr-1'
+              | D
+          .card-footer
+            = link_to 'すべて見る', '#'
